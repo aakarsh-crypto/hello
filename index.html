@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Web Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+<body style="background-color:green">
+    <header>
+        <h1>Finance Web Application</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Track Your Finances</h2>
+                <form id="finance-form">
+                    <label for="expense-date">Expense Date:</label>
+                    <input type="date" id="expense-date" name="expense-date" required>
+
+                    <label for="expense-amount">Expense Amount:</label>
+                    <input type="number" id="expense-amount" name="expense-amount" required>
+
+                    <label for="expense-category">Expense Category:</label>
+                    <select id="expense-category" name="expense-category" required>
+                        <option value="Food">Food</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Housing">Housing</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <button type="submit">Add Expense</button>
+                </form>
+            </div>
+
+            <div class="expense-list">
+                <h2>Expense List</h2>
+                <table id="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Expense Date</th>
+                            <th>Expense Amount</th>
+                            <th>Expense Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+   
+</body>
+<footer>
+   
+    <div class="container">
+        <img src="image1.png" alt="Image 1" style="width: 50%; height: auto; float: left;">
+        <img src="image2.png" alt="Image 2" style="width: 50%; height: auto; float: right;">
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Table</title>
+</head>
+<body>
+    <table id="expense-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Expense Date</th>
+                <th>Expense Amount</th>
+                <th>Expense Type</th>
+            </tr>
+        </thead>
+        <tbody id="expense-table-body">
+        </tbody>
+    </table>
+    <script>
+        const data = [
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-04",
+                "ExpenseAmount": 50.00,
+                "ExpenseType": "Groceries"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-05",
+                "ExpenseAmount": 25.00,
+                "ExpenseType": "Transportation"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-06",
+                "ExpenseAmount": 15.00,
+                "ExpenseType": "Entertainment"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-07",
+                "ExpenseAmount": 30.00,
+                "ExpenseType": "Dining Out"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-08",
+                "ExpenseAmount": 20.00,
+                "ExpenseType": "Personal Care"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-11",
+                "ExpenseAmount": 10.00,
+                "ExpenseType": "Shopping"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-01",
+                "ExpenseAmount": 40.00,
+                "ExpenseType": "Groceries"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-02",
+                "ExpenseAmount": 30.00,
+                "ExpenseType": "Transportation"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-03",
+                "ExpenseAmount": 20.00,
+                "ExpenseType": "Entertainment"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-09",
+                "ExpenseAmount": 40.00,
+                "ExpenseType": "Dining Out"
+            },
+            {
+                "Name": "John Doe",
+                "ExpenseDate": "2023-10-10",
+                "ExpenseAmount": 25.00,
+                "ExpenseType": "Personal Care"
+            }
+        ];
+
+        const expenseTableBody = document.getElementById('expense-table-body');
+
+        data.forEach((expense) => {
+            const newExpenseRow = document.createElement('tr');
+            newExpenseRow.innerHTML = `
+                <td>${expense.Name}</td>
+                <td>${expense.ExpenseDate}</td>
+                <td>${expense.ExpenseAmount}</td>
+                <td>${expense.ExpenseType}</td>
+            `;
+
+            expenseTableBody.appendChild(newExpenseRow);
+        });
+    </script>
+</body>
+</html>
+
+</footer>
+
+</form>
+<h2>Analysis:</h3>
+    <p>Spending should be reduced in Dining out category and should be invested in an appropriate investing instrument</p>
+
+
+</html>
